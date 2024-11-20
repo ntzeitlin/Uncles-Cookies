@@ -87,9 +87,11 @@ const database = {
 }
 
 export const getCookieData = () => {
-  return database.cookies.map(cookie => ({ ...cookie }))
+  let cookieData = database.cookies.map(cookie => ({ ...cookie }))
+  return cookieData.sort((a, b) => a.name.localeCompare(b.name))
 }
 
 export const getIcecreamData = () => {
-  return database.iceCream.map(icecream => ({ ...icecream }))
+  let icecreamData = database.iceCream.map(icecream => ({ ...icecream }))
+  return icecreamData.sort((a, b) => a.name.localeCompare(b.name))
 }

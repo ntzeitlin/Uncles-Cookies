@@ -2,9 +2,17 @@ body {
     margin: 0;
 }
 
+img {
+    max-width: 100px;
+}
+
+h1 {
+    color: purple;
+}
+
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 2fr 1fr 2fr;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
 
@@ -20,12 +28,12 @@ body {
 
 .grid-container>.header {
     grid-area: header;
-    background: blue;
+    background: wheat;
 }
 
 .grid-container>.left-column {
     grid-area: left-column;
-    background: green;
+    background: #A1EEBD;
 }
 
 .grid-container>.middle-column {
@@ -35,7 +43,7 @@ body {
 
 .grid-container>.right-column {
     grid-area: right-column;
-    background: tan;
+    background: #A1EEBD;
 }
 
 .grid-container>.footer {
@@ -43,6 +51,45 @@ body {
     background: red;
 }
 
-.header {
+.header,
+h2 {
     text-align: center;
+}
+
+.dessert-card {
+    display: flex;
+    flex-direction: row;
+    background-color: wheat;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.dessert-card:hover {
+    transform: translateX(-5px);
+}
+
+.dessert-card>.dessert-description {
+    flex-direction: column;
+    padding: 0 10px 0 10px;
+}
+
+.dessert-description>h3 {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 5px;
+
+}
+
+.dessert-description>p {
+    margin-top: 5px;
+}
+
+#cookie-container>.dessert-card {
+    border: dashed 2px #7BD3EA;
+}
+
+#icecream-container>.dessert-card {
+    border: dashed 2px pink;
 }

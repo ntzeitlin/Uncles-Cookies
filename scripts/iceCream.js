@@ -4,8 +4,10 @@ export const generateIcecreamHTML = (dataArray) => {
         icecreamHTML += `
             <article class="dessert-card">
                 <img src="${icecreamObject.img}" />
-                <h3>${icecreamObject.name}</h3>
-                <p>${icecreamObject.description}</p>
+                <div class="dessert-description">
+                    <h3>${icecreamObject.name}</h3>
+                    <p>${icecreamObject.description}</p>
+                </div>
             </article>   
         `
     }

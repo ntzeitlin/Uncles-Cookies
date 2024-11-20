@@ -8,7 +8,6 @@ import { generateIcecreamHTML } from "./iceCream.js";
 const cookieData = getCookieData()
 const icecreamData = getIcecreamData()
 
-
 // send database arrays to html generator
 const cookieHTML = generateCookieHTML(cookieData)
 const icecreamHTML = generateIcecreamHTML(icecreamData)
