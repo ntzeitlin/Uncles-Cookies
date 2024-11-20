@@ -6,7 +6,8 @@ img {
     max-width: 100px;
 }
 
-h1 {
+h1,
+.footer {
     color: purple;
 }
 
@@ -48,13 +49,16 @@ h1 {
 
 .grid-container>.footer {
     grid-area: footer;
-    background: red;
+    background: wheat;
 }
 
 .header,
+.footer,
 h2 {
     text-align: center;
 }
+
+
 
 .dessert-card {
     display: flex;
@@ -84,6 +88,7 @@ h2 {
 
 .dessert-description>p {
     margin-top: 5px;
+    font-style: italic;
 }
 
 #cookie-container>.dessert-card {
@@ -92,4 +97,17 @@ h2 {
 
 #icecream-container>.dessert-card {
     border: dashed 2px pink;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            'header'
+            'right-column'
+            'middle-column'
+            'left-column'
+            'footer';
+    }
 }
